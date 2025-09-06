@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.rbBucketHash = new System.Windows.Forms.RadioButton();
-            this.rbSondLinear = new System.Windows.Forms.RadioButton();
-            this.rbSondQuadrat = new System.Windows.Forms.RadioButton();
             this.rbDuploHash = new System.Windows.Forms.RadioButton();
+            this.rbSondQuadrat = new System.Windows.Forms.RadioButton();
+            this.rbSondLinear = new System.Windows.Forms.RadioButton();
+            this.rbBucketHash = new System.Windows.Forms.RadioButton();
             this.lbPalavra = new System.Windows.Forms.Label();
             this.lbDica = new System.Windows.Forms.Label();
             this.lbListaDados = new System.Windows.Forms.Label();
@@ -59,27 +59,16 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Técnicas de Hashing";
             // 
-            // rbBucketHash
+            // rbDuploHash
             // 
-            this.rbBucketHash.AutoSize = true;
-            this.rbBucketHash.Location = new System.Drawing.Point(7, 32);
-            this.rbBucketHash.Name = "rbBucketHash";
-            this.rbBucketHash.Size = new System.Drawing.Size(104, 20);
-            this.rbBucketHash.TabIndex = 0;
-            this.rbBucketHash.TabStop = true;
-            this.rbBucketHash.Text = "Bucket Hash";
-            this.rbBucketHash.UseVisualStyleBackColor = true;
-            // 
-            // rbSondLinear
-            // 
-            this.rbSondLinear.AutoSize = true;
-            this.rbSondLinear.Location = new System.Drawing.Point(7, 74);
-            this.rbSondLinear.Name = "rbSondLinear";
-            this.rbSondLinear.Size = new System.Drawing.Size(135, 20);
-            this.rbSondLinear.TabIndex = 1;
-            this.rbSondLinear.TabStop = true;
-            this.rbSondLinear.Text = "Sondagem Linear";
-            this.rbSondLinear.UseVisualStyleBackColor = true;
+            this.rbDuploHash.AutoSize = true;
+            this.rbDuploHash.Location = new System.Drawing.Point(7, 149);
+            this.rbDuploHash.Name = "rbDuploHash";
+            this.rbDuploHash.Size = new System.Drawing.Size(99, 20);
+            this.rbDuploHash.TabIndex = 3;
+            this.rbDuploHash.TabStop = true;
+            this.rbDuploHash.Text = "Duplo Hash";
+            this.rbDuploHash.UseVisualStyleBackColor = true;
             // 
             // rbSondQuadrat
             // 
@@ -92,16 +81,27 @@
             this.rbSondQuadrat.Text = "Sondagem Quadrática";
             this.rbSondQuadrat.UseVisualStyleBackColor = true;
             // 
-            // rbDuploHash
+            // rbSondLinear
             // 
-            this.rbDuploHash.AutoSize = true;
-            this.rbDuploHash.Location = new System.Drawing.Point(7, 149);
-            this.rbDuploHash.Name = "rbDuploHash";
-            this.rbDuploHash.Size = new System.Drawing.Size(99, 20);
-            this.rbDuploHash.TabIndex = 3;
-            this.rbDuploHash.TabStop = true;
-            this.rbDuploHash.Text = "Duplo Hash";
-            this.rbDuploHash.UseVisualStyleBackColor = true;
+            this.rbSondLinear.AutoSize = true;
+            this.rbSondLinear.Location = new System.Drawing.Point(7, 74);
+            this.rbSondLinear.Name = "rbSondLinear";
+            this.rbSondLinear.Size = new System.Drawing.Size(135, 20);
+            this.rbSondLinear.TabIndex = 1;
+            this.rbSondLinear.TabStop = true;
+            this.rbSondLinear.Text = "Sondagem Linear";
+            this.rbSondLinear.UseVisualStyleBackColor = true;
+            // 
+            // rbBucketHash
+            // 
+            this.rbBucketHash.AutoSize = true;
+            this.rbBucketHash.Location = new System.Drawing.Point(7, 32);
+            this.rbBucketHash.Name = "rbBucketHash";
+            this.rbBucketHash.Size = new System.Drawing.Size(104, 20);
+            this.rbBucketHash.TabIndex = 0;
+            this.rbBucketHash.TabStop = true;
+            this.rbBucketHash.Text = "Bucket Hash";
+            this.rbBucketHash.UseVisualStyleBackColor = true;
             // 
             // lbPalavra
             // 
@@ -161,6 +161,7 @@
             this.btnIncluir.TabIndex = 7;
             this.btnIncluir.Text = "Incluir";
             this.btnIncluir.UseVisualStyleBackColor = true;
+            this.btnIncluir.Click += new System.EventHandler(this.btnIncluir_Click);
             // 
             // btnExcluir
             // 
