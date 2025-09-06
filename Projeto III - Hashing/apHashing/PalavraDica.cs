@@ -4,14 +4,17 @@
 using Microsoft.Win32;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-public class PalavraDica : IComparable<PalavraDica>, IRegistroPalavraDica
+public class PalavraDica : IComparable<PalavraDica>, IRegistro<PalavraDica>
 {
     public string Palavra { get; private set; }   // private set indica que valor Palavra só pode ser definido dentro da classe
     public string Dica { get; set; }  // permite leitura e modificação do valor Dica de fora da classe
+
+    //public PalavraDica() { }
 
     // construtor
     public PalavraDica(string palavra, string dica)
@@ -19,6 +22,22 @@ public class PalavraDica : IComparable<PalavraDica>, IRegistroPalavraDica
         Palavra = palavra;
         Dica = dica;
     }
+
+    public PalavraDica LerRegistro(StreamReader arquivo)
+    {
+        var linha = arquivo.ReadLine();
+        if (linha == null) return null;
+        string palavra = linha.Length >= 30 ? linha.Substring(0, 30).Trim() : linha.Trim();
+        string dica = linha.Length > 30 ? linha.Substring(30).Trim() : string.Empty;
+        return new PalavraDica(palavra, dica);
+    }
+
+    public void EscreverRegistro(StreamWriter arquivo)
+    {
+        arquivo.WriteLine(FormatoDeArquivo());
+    }
+
+    public string Chave => Palavra;
 
     // método que implementa a interface IComparable, ele permite que os objetos dessa classe sejam comparados para ordenação
     public int CompareTo(PalavraDica outra)

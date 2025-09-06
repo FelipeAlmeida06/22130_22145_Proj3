@@ -55,7 +55,6 @@
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
     <Compile Include="IRegistro.cs" />
-    <Compile Include="IRegistroPalavraDica.cs" />
     <Compile Include="ITabelaHash.cs" />
     <Compile Include="PalavraDica.cs" />
     <Compile Include="Program.cs" />

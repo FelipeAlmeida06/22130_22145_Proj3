@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnAbrirArquivo = new System.Windows.Forms.Button();
             this.rbDuploHash = new System.Windows.Forms.RadioButton();
             this.rbSondQuadrat = new System.Windows.Forms.RadioButton();
             this.rbSondLinear = new System.Windows.Forms.RadioButton();
@@ -43,26 +44,38 @@
             this.btnExcluir = new System.Windows.Forms.Button();
             this.btnAlterar = new System.Windows.Forms.Button();
             this.btnListar = new System.Windows.Forms.Button();
+            this.dlgAbrirArquivo = new System.Windows.Forms.OpenFileDialog();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.btnAbrirArquivo);
             this.groupBox1.Controls.Add(this.rbDuploHash);
             this.groupBox1.Controls.Add(this.rbSondQuadrat);
             this.groupBox1.Controls.Add(this.rbSondLinear);
             this.groupBox1.Controls.Add(this.rbBucketHash);
             this.groupBox1.Location = new System.Drawing.Point(13, 23);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(260, 192);
+            this.groupBox1.Size = new System.Drawing.Size(267, 209);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Técnicas de Hashing";
             // 
+            // btnAbrirArquivo
+            // 
+            this.btnAbrirArquivo.Location = new System.Drawing.Point(6, 166);
+            this.btnAbrirArquivo.Name = "btnAbrirArquivo";
+            this.btnAbrirArquivo.Size = new System.Drawing.Size(122, 25);
+            this.btnAbrirArquivo.TabIndex = 4;
+            this.btnAbrirArquivo.Text = "Abrir Arquivo";
+            this.btnAbrirArquivo.UseVisualStyleBackColor = true;
+            this.btnAbrirArquivo.Click += new System.EventHandler(this.btnAbrirArquivo_Click);
+            // 
             // rbDuploHash
             // 
             this.rbDuploHash.AutoSize = true;
-            this.rbDuploHash.Location = new System.Drawing.Point(7, 149);
+            this.rbDuploHash.Location = new System.Drawing.Point(6, 140);
             this.rbDuploHash.Name = "rbDuploHash";
             this.rbDuploHash.Size = new System.Drawing.Size(99, 20);
             this.rbDuploHash.TabIndex = 3;
@@ -73,7 +86,7 @@
             // rbSondQuadrat
             // 
             this.rbSondQuadrat.AutoSize = true;
-            this.rbSondQuadrat.Location = new System.Drawing.Point(7, 114);
+            this.rbSondQuadrat.Location = new System.Drawing.Point(6, 105);
             this.rbSondQuadrat.Name = "rbSondQuadrat";
             this.rbSondQuadrat.Size = new System.Drawing.Size(164, 20);
             this.rbSondQuadrat.TabIndex = 2;
@@ -84,7 +97,7 @@
             // rbSondLinear
             // 
             this.rbSondLinear.AutoSize = true;
-            this.rbSondLinear.Location = new System.Drawing.Point(7, 74);
+            this.rbSondLinear.Location = new System.Drawing.Point(6, 68);
             this.rbSondLinear.Name = "rbSondLinear";
             this.rbSondLinear.Size = new System.Drawing.Size(135, 20);
             this.rbSondLinear.TabIndex = 1;
@@ -150,14 +163,14 @@
             this.lsbListagem.ItemHeight = 16;
             this.lsbListagem.Location = new System.Drawing.Point(13, 254);
             this.lsbListagem.Name = "lsbListagem";
-            this.lsbListagem.Size = new System.Drawing.Size(735, 196);
+            this.lsbListagem.Size = new System.Drawing.Size(782, 228);
             this.lsbListagem.TabIndex = 6;
             // 
             // btnIncluir
             // 
             this.btnIncluir.Location = new System.Drawing.Point(317, 151);
             this.btnIncluir.Name = "btnIncluir";
-            this.btnIncluir.Size = new System.Drawing.Size(75, 23);
+            this.btnIncluir.Size = new System.Drawing.Size(85, 32);
             this.btnIncluir.TabIndex = 7;
             this.btnIncluir.Text = "Incluir";
             this.btnIncluir.UseVisualStyleBackColor = true;
@@ -167,34 +180,41 @@
             // 
             this.btnExcluir.Location = new System.Drawing.Point(424, 151);
             this.btnExcluir.Name = "btnExcluir";
-            this.btnExcluir.Size = new System.Drawing.Size(75, 23);
+            this.btnExcluir.Size = new System.Drawing.Size(85, 32);
             this.btnExcluir.TabIndex = 8;
             this.btnExcluir.Text = "Excluir";
             this.btnExcluir.UseVisualStyleBackColor = true;
+            this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
             // 
             // btnAlterar
             // 
             this.btnAlterar.Location = new System.Drawing.Point(531, 151);
             this.btnAlterar.Name = "btnAlterar";
-            this.btnAlterar.Size = new System.Drawing.Size(75, 23);
+            this.btnAlterar.Size = new System.Drawing.Size(85, 32);
             this.btnAlterar.TabIndex = 9;
             this.btnAlterar.Text = "Alterar";
             this.btnAlterar.UseVisualStyleBackColor = true;
+            this.btnAlterar.Click += new System.EventHandler(this.btnAlterar_Click);
             // 
             // btnListar
             // 
             this.btnListar.Location = new System.Drawing.Point(640, 151);
             this.btnListar.Name = "btnListar";
-            this.btnListar.Size = new System.Drawing.Size(75, 23);
+            this.btnListar.Size = new System.Drawing.Size(85, 32);
             this.btnListar.TabIndex = 10;
             this.btnListar.Text = "Listar";
             this.btnListar.UseVisualStyleBackColor = true;
+            this.btnListar.Click += new System.EventHandler(this.btnListar_Click);
+            // 
+            // dlgAbrirArquivo
+            // 
+            this.dlgAbrirArquivo.FileName = "openFileDialog1";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(810, 473);
+            this.ClientSize = new System.Drawing.Size(837, 498);
             this.Controls.Add(this.btnListar);
             this.Controls.Add(this.btnAlterar);
             this.Controls.Add(this.btnExcluir);
@@ -232,6 +252,8 @@
         private System.Windows.Forms.Button btnExcluir;
         private System.Windows.Forms.Button btnAlterar;
         private System.Windows.Forms.Button btnListar;
+        private System.Windows.Forms.OpenFileDialog dlgAbrirArquivo;
+        private System.Windows.Forms.Button btnAbrirArquivo;
     }
 }
 
