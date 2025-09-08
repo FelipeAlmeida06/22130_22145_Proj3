@@ -51,7 +51,7 @@ namespace apHashing
                 {
                     using (var sr = new StreamReader(dlgAbrirArquivo.FileName))
                     {
-                        bool primeiraLinhaArqTexto = true;
+                        //bool primeiraLinhaArqTexto = true;
 
                         while (!sr.EndOfStream)
                         {
@@ -59,11 +59,11 @@ namespace apHashing
                             if (string.IsNullOrWhiteSpace(linha)) continue;
 
                             // Ignorar a primeira linha (cabeçalho)
-                            if (primeiraLinhaArqTexto)
-                            {
-                                primeiraLinhaArqTexto = false;
-                                continue;
-                            }
+                            //if (primeiraLinhaArqTexto)
+                            //{
+                                //primeiraLinhaArqTexto = false;
+                                //continue;
+                            //}
 
                             // Palavra nos 30 primeiros caracteres
                             string palavra = linha.Length >= 30 ? linha.Substring(0, 30).Trim() : linha.Trim();
@@ -158,6 +158,8 @@ namespace apHashing
         // linha selecionada e preencher os campos txtPalavra e txtDica
         private void lsbListagem_SelectedIndexChanged(object sender, EventArgs e)
         {
+
+            /*
             // Verifica se um item está selecionado
             if (lsbListagem.SelectedIndex != -1)
             {
@@ -187,6 +189,43 @@ namespace apHashing
                         txtDica.Text = dica;
                     }
                 }
+            }
+            */
+
+
+
+            if (lsbListagem.SelectedIndex != -1)
+            {
+                string selectedItem = lsbListagem.SelectedItem.ToString();
+
+                int separatorIndex = selectedItem.IndexOf(':');
+                if (separatorIndex != -1)
+                {
+                    string palavraDica = selectedItem.Substring(separatorIndex + 1).Trim();
+
+                    int lastSeparator = palavraDica.LastIndexOf(" - ");
+                    if (lastSeparator != -1)
+                    {
+                        string palavra = palavraDica.Substring(0, lastSeparator).Trim();
+                        string dica = palavraDica.Substring(lastSeparator + 3).Trim();
+
+                        if (palavra.StartsWith("|"))
+                        {
+                            palavra = palavra.Replace("|", "").Trim();
+                        }
+
+                        txtPalavra.Text = palavra;
+                        txtDica.Text = dica;
+
+                        // Desativa a edição do campo da palavra.
+                        txtPalavra.Enabled = false;
+                    }
+                }
+            }
+            else
+            {
+                // Reativa a edição se nada estiver selecionado.
+                txtPalavra.Enabled = true;
             }
         }
 
@@ -287,7 +326,53 @@ namespace apHashing
         // Alteração de dica de uma dada palavra
         private void btnAlterar_Click(object sender, EventArgs e)
         {
+            // Validar se um arquivo está aberto e se os campos estão preenchidos.
+            if (string.IsNullOrWhiteSpace(dlgAbrirArquivo.FileName))
+            {
+                MessageBox.Show("Nenhum arquivo selecionado! Por favor, clique em 'Abrir Arquivo' para escolher um arquivo antes de alterar.");
+                return;
+            }
 
+            string palavra = txtPalavra.Text.Trim();
+            string novaDica = txtDica.Text.Trim();
+
+            if (string.IsNullOrWhiteSpace(palavra) || string.IsNullOrWhiteSpace(novaDica))
+            {
+                MessageBox.Show("Preencha os campos de Palavra e Dica para alterar o registro.");
+                return;
+            }
+
+            try
+            {
+                // Busca o registro completo na tabela hash usando apenas a palavra como chave.
+                var itemParaAlterar = tabelaDeHash.Buscar(palavra);
+
+                if (itemParaAlterar != null)
+                {
+                    // Atualiza a propriedade Dica do objeto encontrado.
+                    itemParaAlterar.Dica = novaDica;
+
+                    // Salva as alterações no arquivo de texto.
+                    RecriarArquivoTexto();
+
+                    // Atualiza a lista exibida na interface para refletir a mudança.
+                    AtualizarListBox();
+
+                    MessageBox.Show($"A dica da palavra '{palavra}' foi alterada com sucesso.");
+
+                    // Limpa os campos após a alteração bem-sucedida.
+                    txtPalavra.Clear();
+                    txtDica.Clear();
+                }
+                else
+                {
+                    MessageBox.Show($"Não foi possível encontrar a palavra '{palavra}' para alteração.");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro ao alterar: " + ex.Message);
+            }
         }
 
         // Listagem de todas as palavras e dicas armazenadas na tabela de hash

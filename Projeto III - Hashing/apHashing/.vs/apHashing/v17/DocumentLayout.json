@@ -7,6 +7,10 @@
       "RelativeMoniker": "D:0:0:{E0994676-0971-4574-847D-5595CC09A146}|apHashing.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{E0994676-0971-4574-847D-5595CC09A146}|apHashing.csproj|C:\\Users\\u22130\\Documents\\GitHub\\22130_22145_Proj3\\Projeto III - Hashing\\apHashing\\buckethash.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E0994676-0971-4574-847D-5595CC09A146}|apHashing.csproj|solutionrelative:buckethash.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{E0994676-0971-4574-847D-5595CC09A146}|apHashing.csproj|C:\\Users\\u22130\\Documents\\GitHub\\22130_22145_Proj3\\Projeto III - Hashing\\apHashing\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{E0994676-0971-4574-847D-5595CC09A146}|apHashing.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
@@ -29,10 +33,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{E0994676-0971-4574-847D-5595CC09A146}|apHashing.csproj|C:\\Users\\u22130\\Documents\\GitHub\\22130_22145_Proj3\\Projeto III - Hashing\\apHashing\\sondagemquadratica.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E0994676-0971-4574-847D-5595CC09A146}|apHashing.csproj|solutionrelative:sondagemquadratica.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E0994676-0971-4574-847D-5595CC09A146}|apHashing.csproj|C:\\Users\\u22130\\Documents\\GitHub\\22130_22145_Proj3\\Projeto III - Hashing\\apHashing\\buckethash.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E0994676-0971-4574-847D-5595CC09A146}|apHashing.csproj|solutionrelative:buckethash.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E0994676-0971-4574-847D-5595CC09A146}|apHashing.csproj|C:\\Users\\u22130\\Documents\\GitHub\\22130_22145_Proj3\\Projeto III - Hashing\\apHashing\\sondagemlinear.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -128,14 +128,14 @@
               "RelativeDocumentMoniker": "Form1.cs",
               "ToolTip": "C:\\Users\\u22130\\Documents\\GitHub\\22130_22145_Proj3\\Projeto III - Hashing\\apHashing\\Form1.cs",
               "RelativeToolTip": "Form1.cs",
-              "ViewState": "AgIAABABAAAAAAAAAAAuwCEBAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAACwAAAAAAAAAAAAcwEEAAAAfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-09-06T15:40:18.971Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "ITabelaHash.cs",
               "DocumentMoniker": "C:\\Users\\u22130\\Documents\\GitHub\\22130_22145_Proj3\\Projeto III - Hashing\\apHashing\\ITabelaHash.cs",
               "RelativeDocumentMoniker": "ITabelaHash.cs",
@@ -143,12 +143,11 @@
               "RelativeToolTip": "ITabelaHash.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-06T15:22:31.194Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-06T15:22:31.194Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "PalavraDica.cs",
               "DocumentMoniker": "C:\\Users\\u22130\\Documents\\GitHub\\22130_22145_Proj3\\Projeto III - Hashing\\apHashing\\PalavraDica.cs",
               "RelativeDocumentMoniker": "PalavraDica.cs",
@@ -156,12 +155,11 @@
               "RelativeToolTip": "PalavraDica.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAABqAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-06T15:18:56.525Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-06T15:18:56.525Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "IRegistro.cs",
               "DocumentMoniker": "C:\\Users\\u22130\\Documents\\GitHub\\22130_22145_Proj3\\Projeto III - Hashing\\apHashing\\IRegistro.cs",
               "RelativeDocumentMoniker": "IRegistro.cs",
@@ -169,12 +167,11 @@
               "RelativeToolTip": "IRegistro.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAZAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-06T15:23:55.344Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-06T15:23:55.344Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "DuploHash.cs",
               "DocumentMoniker": "C:\\Users\\u22130\\Documents\\GitHub\\22130_22145_Proj3\\Projeto III - Hashing\\apHashing\\DuploHash.cs",
               "RelativeDocumentMoniker": "DuploHash.cs",
@@ -182,8 +179,7 @@
               "RelativeToolTip": "DuploHash.cs",
               "ViewState": "AgIAAEEAAAAAAAAAAAAuwCEAAAAYAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-06T15:15:56.709Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-06T15:15:56.709Z"
             },
             {
               "$type": "Document",
@@ -195,37 +191,35 @@
               "RelativeToolTip": "SondagemLinear.cs",
               "ViewState": "AgIAAEgAAAAAAAAAAAAmwB8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-06T15:14:31.172Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-06T15:14:31.172Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 1,
               "Title": "BucketHash.cs",
               "DocumentMoniker": "C:\\Users\\u22130\\Documents\\GitHub\\22130_22145_Proj3\\Projeto III - Hashing\\apHashing\\BucketHash.cs",
               "RelativeDocumentMoniker": "BucketHash.cs",
               "ToolTip": "C:\\Users\\u22130\\Documents\\GitHub\\22130_22145_Proj3\\Projeto III - Hashing\\apHashing\\BucketHash.cs",
               "RelativeToolTip": "BucketHash.cs",
-              "ViewState": "AgIAAA4AAAAAAAAAAAAQwE8AAAAVAAAAAAAAAA==",
+              "ViewState": "AgIAADcAAAAAAAAAAAAcwE0AAABgAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-09-06T15:14:02.69Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "Form1.cs [Design]",
               "DocumentMoniker": "C:\\Users\\u22130\\Documents\\GitHub\\22130_22145_Proj3\\Projeto III - Hashing\\apHashing\\Form1.cs",
               "RelativeDocumentMoniker": "Form1.cs",
               "ToolTip": "C:\\Users\\u22130\\Documents\\GitHub\\22130_22145_Proj3\\Projeto III - Hashing\\apHashing\\Form1.cs [Design]",
               "RelativeToolTip": "Form1.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-06T14:56:34.977Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2025-09-06T14:56:34.977Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "SondagemQuadratica.cs",
               "DocumentMoniker": "C:\\Users\\u22130\\Documents\\GitHub\\22130_22145_Proj3\\Projeto III - Hashing\\apHashing\\SondagemQuadratica.cs",
               "RelativeDocumentMoniker": "SondagemQuadratica.cs",
@@ -233,8 +227,7 @@
               "RelativeToolTip": "SondagemQuadratica.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAD4AAAATAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-06T15:14:55.38Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-06T15:14:55.38Z"
             }
           ]
         }

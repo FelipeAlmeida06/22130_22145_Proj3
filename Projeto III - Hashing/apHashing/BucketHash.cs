@@ -72,9 +72,10 @@ public class BucketHash<Tipo> : ITabelaHash<Tipo>
         for (int i = 0; i < dados.Length; i++)
             if (dados[i].Count > 0)
             {
-                string linha = $"{i,5} : ";
+                string linha = $"{i} : ";                               // string linha = $"{i,5} : ";
                 foreach (Tipo item in dados[i])
-                    linha += " | " + item.Chave + " - " + item.Dados;
+                    //linha += " | " + item.Chave + " - " + item.Dados;
+                    linha += item.Chave + " - " + item.Dados;           // retirei a barra ' I '
                 saida.Add(linha);
             }
         return saida;
