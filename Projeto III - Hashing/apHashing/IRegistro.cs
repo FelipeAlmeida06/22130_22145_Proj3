@@ -14,4 +14,5 @@ public interface IRegistro<Tipo> where Tipo : IComparable<Tipo>
     void EscreverRegistro(StreamWriter arquivo);
     int CompareTo(Tipo outro);
     string Chave { get; }
+    string Dados { get; }
 }

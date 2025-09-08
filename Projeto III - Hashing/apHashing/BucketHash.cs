@@ -74,7 +74,7 @@ public class BucketHash<Tipo> : ITabelaHash<Tipo>
             {
                 string linha = $"{i,5} : ";
                 foreach (Tipo item in dados[i])
-                    linha += " | " + item.Chave;
+                    linha += " | " + item.Chave + " - " + item.Dados;
                 saida.Add(linha);
             }
         return saida;

@@ -55,18 +55,21 @@
             this.groupBox1.Controls.Add(this.rbSondQuadrat);
             this.groupBox1.Controls.Add(this.rbSondLinear);
             this.groupBox1.Controls.Add(this.rbBucketHash);
-            this.groupBox1.Location = new System.Drawing.Point(13, 23);
+            this.groupBox1.Location = new System.Drawing.Point(10, 19);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(267, 209);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Size = new System.Drawing.Size(200, 170);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Técnicas de Hashing";
             // 
             // btnAbrirArquivo
             // 
-            this.btnAbrirArquivo.Location = new System.Drawing.Point(6, 166);
+            this.btnAbrirArquivo.Location = new System.Drawing.Point(4, 135);
+            this.btnAbrirArquivo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnAbrirArquivo.Name = "btnAbrirArquivo";
-            this.btnAbrirArquivo.Size = new System.Drawing.Size(122, 25);
+            this.btnAbrirArquivo.Size = new System.Drawing.Size(92, 20);
             this.btnAbrirArquivo.TabIndex = 4;
             this.btnAbrirArquivo.Text = "Abrir Arquivo";
             this.btnAbrirArquivo.UseVisualStyleBackColor = true;
@@ -75,9 +78,10 @@
             // rbDuploHash
             // 
             this.rbDuploHash.AutoSize = true;
-            this.rbDuploHash.Location = new System.Drawing.Point(6, 140);
+            this.rbDuploHash.Location = new System.Drawing.Point(4, 114);
+            this.rbDuploHash.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.rbDuploHash.Name = "rbDuploHash";
-            this.rbDuploHash.Size = new System.Drawing.Size(99, 20);
+            this.rbDuploHash.Size = new System.Drawing.Size(81, 17);
             this.rbDuploHash.TabIndex = 3;
             this.rbDuploHash.TabStop = true;
             this.rbDuploHash.Text = "Duplo Hash";
@@ -86,9 +90,10 @@
             // rbSondQuadrat
             // 
             this.rbSondQuadrat.AutoSize = true;
-            this.rbSondQuadrat.Location = new System.Drawing.Point(6, 105);
+            this.rbSondQuadrat.Location = new System.Drawing.Point(4, 85);
+            this.rbSondQuadrat.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.rbSondQuadrat.Name = "rbSondQuadrat";
-            this.rbSondQuadrat.Size = new System.Drawing.Size(164, 20);
+            this.rbSondQuadrat.Size = new System.Drawing.Size(131, 17);
             this.rbSondQuadrat.TabIndex = 2;
             this.rbSondQuadrat.TabStop = true;
             this.rbSondQuadrat.Text = "Sondagem Quadrática";
@@ -97,9 +102,10 @@
             // rbSondLinear
             // 
             this.rbSondLinear.AutoSize = true;
-            this.rbSondLinear.Location = new System.Drawing.Point(6, 68);
+            this.rbSondLinear.Location = new System.Drawing.Point(4, 55);
+            this.rbSondLinear.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.rbSondLinear.Name = "rbSondLinear";
-            this.rbSondLinear.Size = new System.Drawing.Size(135, 20);
+            this.rbSondLinear.Size = new System.Drawing.Size(108, 17);
             this.rbSondLinear.TabIndex = 1;
             this.rbSondLinear.TabStop = true;
             this.rbSondLinear.Text = "Sondagem Linear";
@@ -108,9 +114,10 @@
             // rbBucketHash
             // 
             this.rbBucketHash.AutoSize = true;
-            this.rbBucketHash.Location = new System.Drawing.Point(7, 32);
+            this.rbBucketHash.Location = new System.Drawing.Point(5, 26);
+            this.rbBucketHash.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.rbBucketHash.Name = "rbBucketHash";
-            this.rbBucketHash.Size = new System.Drawing.Size(104, 20);
+            this.rbBucketHash.Size = new System.Drawing.Size(87, 17);
             this.rbBucketHash.TabIndex = 0;
             this.rbBucketHash.TabStop = true;
             this.rbBucketHash.Text = "Bucket Hash";
@@ -119,58 +126,65 @@
             // lbPalavra
             // 
             this.lbPalavra.AutoSize = true;
-            this.lbPalavra.Location = new System.Drawing.Point(314, 23);
+            this.lbPalavra.Location = new System.Drawing.Point(236, 19);
+            this.lbPalavra.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbPalavra.Name = "lbPalavra";
-            this.lbPalavra.Size = new System.Drawing.Size(57, 16);
+            this.lbPalavra.Size = new System.Drawing.Size(46, 13);
             this.lbPalavra.TabIndex = 1;
             this.lbPalavra.Text = "Palavra:";
             // 
             // lbDica
             // 
             this.lbDica.AutoSize = true;
-            this.lbDica.Location = new System.Drawing.Point(314, 80);
+            this.lbDica.Location = new System.Drawing.Point(236, 65);
+            this.lbDica.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbDica.Name = "lbDica";
-            this.lbDica.Size = new System.Drawing.Size(38, 16);
+            this.lbDica.Size = new System.Drawing.Size(32, 13);
             this.lbDica.TabIndex = 2;
             this.lbDica.Text = "Dica:";
             // 
             // lbListaDados
             // 
             this.lbListaDados.AutoSize = true;
-            this.lbListaDados.Location = new System.Drawing.Point(12, 235);
+            this.lbListaDados.Location = new System.Drawing.Point(9, 191);
+            this.lbListaDados.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbListaDados.Name = "lbListaDados";
-            this.lbListaDados.Size = new System.Drawing.Size(96, 16);
+            this.lbListaDados.Size = new System.Drawing.Size(76, 13);
             this.lbListaDados.TabIndex = 3;
             this.lbListaDados.Text = "Lista de dados";
             // 
             // txtPalavra
             // 
-            this.txtPalavra.Location = new System.Drawing.Point(397, 23);
+            this.txtPalavra.Location = new System.Drawing.Point(298, 19);
+            this.txtPalavra.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtPalavra.Name = "txtPalavra";
-            this.txtPalavra.Size = new System.Drawing.Size(209, 22);
+            this.txtPalavra.Size = new System.Drawing.Size(158, 20);
             this.txtPalavra.TabIndex = 4;
             // 
             // txtDica
             // 
-            this.txtDica.Location = new System.Drawing.Point(397, 80);
+            this.txtDica.Location = new System.Drawing.Point(298, 65);
+            this.txtDica.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtDica.Name = "txtDica";
-            this.txtDica.Size = new System.Drawing.Size(351, 22);
+            this.txtDica.Size = new System.Drawing.Size(264, 20);
             this.txtDica.TabIndex = 5;
             // 
             // lsbListagem
             // 
             this.lsbListagem.FormattingEnabled = true;
-            this.lsbListagem.ItemHeight = 16;
-            this.lsbListagem.Location = new System.Drawing.Point(13, 254);
+            this.lsbListagem.Location = new System.Drawing.Point(10, 206);
+            this.lsbListagem.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.lsbListagem.Name = "lsbListagem";
-            this.lsbListagem.Size = new System.Drawing.Size(782, 228);
+            this.lsbListagem.Size = new System.Drawing.Size(588, 186);
             this.lsbListagem.TabIndex = 6;
+            this.lsbListagem.SelectedIndexChanged += new System.EventHandler(this.lsbListagem_SelectedIndexChanged);
             // 
             // btnIncluir
             // 
-            this.btnIncluir.Location = new System.Drawing.Point(317, 151);
+            this.btnIncluir.Location = new System.Drawing.Point(238, 123);
+            this.btnIncluir.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnIncluir.Name = "btnIncluir";
-            this.btnIncluir.Size = new System.Drawing.Size(85, 32);
+            this.btnIncluir.Size = new System.Drawing.Size(64, 26);
             this.btnIncluir.TabIndex = 7;
             this.btnIncluir.Text = "Incluir";
             this.btnIncluir.UseVisualStyleBackColor = true;
@@ -178,9 +192,10 @@
             // 
             // btnExcluir
             // 
-            this.btnExcluir.Location = new System.Drawing.Point(424, 151);
+            this.btnExcluir.Location = new System.Drawing.Point(318, 123);
+            this.btnExcluir.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnExcluir.Name = "btnExcluir";
-            this.btnExcluir.Size = new System.Drawing.Size(85, 32);
+            this.btnExcluir.Size = new System.Drawing.Size(64, 26);
             this.btnExcluir.TabIndex = 8;
             this.btnExcluir.Text = "Excluir";
             this.btnExcluir.UseVisualStyleBackColor = true;
@@ -188,9 +203,10 @@
             // 
             // btnAlterar
             // 
-            this.btnAlterar.Location = new System.Drawing.Point(531, 151);
+            this.btnAlterar.Location = new System.Drawing.Point(398, 123);
+            this.btnAlterar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnAlterar.Name = "btnAlterar";
-            this.btnAlterar.Size = new System.Drawing.Size(85, 32);
+            this.btnAlterar.Size = new System.Drawing.Size(64, 26);
             this.btnAlterar.TabIndex = 9;
             this.btnAlterar.Text = "Alterar";
             this.btnAlterar.UseVisualStyleBackColor = true;
@@ -198,9 +214,10 @@
             // 
             // btnListar
             // 
-            this.btnListar.Location = new System.Drawing.Point(640, 151);
+            this.btnListar.Location = new System.Drawing.Point(480, 123);
+            this.btnListar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnListar.Name = "btnListar";
-            this.btnListar.Size = new System.Drawing.Size(85, 32);
+            this.btnListar.Size = new System.Drawing.Size(64, 26);
             this.btnListar.TabIndex = 10;
             this.btnListar.Text = "Listar";
             this.btnListar.UseVisualStyleBackColor = true;
@@ -212,9 +229,9 @@
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(837, 498);
+            this.ClientSize = new System.Drawing.Size(628, 405);
             this.Controls.Add(this.btnListar);
             this.Controls.Add(this.btnAlterar);
             this.Controls.Add(this.btnExcluir);
@@ -226,6 +243,7 @@
             this.Controls.Add(this.lbDica);
             this.Controls.Add(this.lbPalavra);
             this.Controls.Add(this.groupBox1);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "Form1";
             this.Text = "Manutenção de Palavras e Dicas";
             this.groupBox1.ResumeLayout(false);

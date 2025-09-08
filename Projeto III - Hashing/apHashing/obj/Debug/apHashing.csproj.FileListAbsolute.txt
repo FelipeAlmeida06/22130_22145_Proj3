@@ -18,3 +18,4 @@ C:\Users\u22130\Documents\GitHub\22130_22145_Proj3\Projeto III - Hashing\apHashi
 C:\Users\u22130\Documents\GitHub\22130_22145_Proj3\Projeto III - Hashing\apHashing\obj\Debug\apHashing.csproj.CoreCompileInputs.cache
 C:\Users\u22130\Documents\GitHub\22130_22145_Proj3\Projeto III - Hashing\apHashing\obj\Debug\apHashing.exe
 C:\Users\u22130\Documents\GitHub\22130_22145_Proj3\Projeto III - Hashing\apHashing\obj\Debug\apHashing.pdb
+C:\Users\u22130\Documents\GitHub\22130_22145_Proj3\Projeto III - Hashing\apHashing\obj\Debug\apHashing.exe.config

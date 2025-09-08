@@ -28,7 +28,7 @@ public class SondagemLinear<Tipo> : ITabelaHash<Tipo>
 
         for (int i = 0; i < dados.Length; i++)
             if (dados[i] != null)
-                conteudo.Add(i + ": " + dados[i].Chave);
+                conteudo.Add(i + ": " + dados[i].Chave + " - " + dados[i].Dados);
 
         return conteudo;
     }

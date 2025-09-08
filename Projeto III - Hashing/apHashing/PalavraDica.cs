@@ -37,7 +37,8 @@ public class PalavraDica : IComparable<PalavraDica>, IRegistro<PalavraDica>
         arquivo.WriteLine(FormatoDeArquivo());
     }
 
-    public string Chave => Palavra;
+    public string Chave => Palavra;     // implementa a propriedade "Chave" da interface IRegistro
+    public string Dados => Dica;        // implementa a propriedade "Dados" da interface IRegistro
 
     // método que implementa a interface IComparable, ele permite que os objetos dessa classe sejam comparados para ordenação
     public int CompareTo(PalavraDica outra)
