@@ -10,16 +10,31 @@ using System.Threading.Tasks;
 public class SondagemLinear<Tipo> : ITabelaHash<Tipo>
     where Tipo : IRegistro<Tipo>, IComparable<Tipo>
 {
-    private const int tamanhoDaTabela = 131;
-    Tipo[] dados;
+    //private const int tamanhoDaTabela = 131;
+    //Tipo[] dados;
+    //private List<string> chaves;
+
+    private int tamanhoDaTabela;
+    private Tipo[] dados;
     private List<string> chaves;
+    private int quantidadeDeItens; // Adicione um contador de itens
 
     public List<string> Chaves => chaves;
+    public int Tamanho => tamanhoDaTabela;     // Adicione esta propriedade à interface ITabelaHash
 
     public SondagemLinear()
     {
         dados = new Tipo[tamanhoDaTabela];
         chaves = new List<string>();
+    }
+
+    // Novo construtor para o rehash
+    public SondagemLinear(int tamanho)
+    {
+        tamanhoDaTabela = tamanho;
+        dados = new Tipo[tamanhoDaTabela];
+        chaves = new List<string>();
+        quantidadeDeItens = 0;
     }
 
     public List<string> Conteudo()

@@ -56,9 +56,12 @@
     </Compile>
     <Compile Include="IRegistro.cs" />
     <Compile Include="ITabelaHash.cs" />
+    <Compile Include="ListaSimples.cs" />
+    <Compile Include="NoLista.cs" />
     <Compile Include="PalavraDica.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ReHash.cs" />
     <Compile Include="SondagemLinear.cs" />
     <Compile Include="SondagemQuadratica.cs" />
     <EmbeddedResource Include="Form1.resx">

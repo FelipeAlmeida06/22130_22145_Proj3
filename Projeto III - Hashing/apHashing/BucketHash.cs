@@ -13,7 +13,7 @@ public class BucketHash<Tipo> : ITabelaHash<Tipo>
                          IComparable<Tipo>
 {
     private const int SIZE = 131;  // para gerar mais colisões; o ideal é primo > 100
-    ArrayList[] dados;
+    ArrayList[] dados;             // ALTERAR AQUI: Implementar ListaSimples
     private List<string> chaves;
 
     public List<string> Chaves => chaves;
