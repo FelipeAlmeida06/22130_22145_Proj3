@@ -8,3 +8,13 @@ C:\Users\Felipe Almeida\Documents\GitHub\22130_22145_Proj3\Projeto III - Hashing
 C:\Users\Felipe Almeida\Documents\GitHub\22130_22145_Proj3\Projeto III - Hashing\apHashing\obj\Debug\apHashing.csproj.CoreCompileInputs.cache
 C:\Users\Felipe Almeida\Documents\GitHub\22130_22145_Proj3\Projeto III - Hashing\apHashing\obj\Debug\apHashing.exe
 C:\Users\Felipe Almeida\Documents\GitHub\22130_22145_Proj3\Projeto III - Hashing\apHashing\obj\Debug\apHashing.pdb
+C:\Users\u22130\Documents\GitHub\22130_22145_Proj3\Projeto III - Hashing\apHashing\bin\Debug\apHashing.exe.config
+C:\Users\u22130\Documents\GitHub\22130_22145_Proj3\Projeto III - Hashing\apHashing\bin\Debug\apHashing.exe
+C:\Users\u22130\Documents\GitHub\22130_22145_Proj3\Projeto III - Hashing\apHashing\bin\Debug\apHashing.pdb
+C:\Users\u22130\Documents\GitHub\22130_22145_Proj3\Projeto III - Hashing\apHashing\obj\Debug\apHashing.csproj.AssemblyReference.cache
+C:\Users\u22130\Documents\GitHub\22130_22145_Proj3\Projeto III - Hashing\apHashing\obj\Debug\apHashing.Form1.resources
+C:\Users\u22130\Documents\GitHub\22130_22145_Proj3\Projeto III - Hashing\apHashing\obj\Debug\apHashing.Properties.Resources.resources
+C:\Users\u22130\Documents\GitHub\22130_22145_Proj3\Projeto III - Hashing\apHashing\obj\Debug\apHashing.csproj.GenerateResource.cache
+C:\Users\u22130\Documents\GitHub\22130_22145_Proj3\Projeto III - Hashing\apHashing\obj\Debug\apHashing.csproj.CoreCompileInputs.cache
+C:\Users\u22130\Documents\GitHub\22130_22145_Proj3\Projeto III - Hashing\apHashing\obj\Debug\apHashing.exe
+C:\Users\u22130\Documents\GitHub\22130_22145_Proj3\Projeto III - Hashing\apHashing\obj\Debug\apHashing.pdb
