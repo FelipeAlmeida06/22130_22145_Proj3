@@ -9,6 +9,7 @@ using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -76,11 +77,13 @@ namespace apHashing
                         }
                     }
 
-                    lsbListagem.Items.Clear();
-                    foreach (var item in tabelaDeHash.Conteudo())
-                    {
-                        lsbListagem.Items.Add(item.ToString());
-                    }
+                    MessageBox.Show("Clique no botão Listar para ver os registros armazenados na tabela de hash.");
+
+                    //lsbListagem.Items.Clear();
+                    //foreach (var item in tabelaDeHash.Conteudo())
+                    //{
+                        //lsbListagem.Items.Add(item.ToString());
+                    //}
                 }
                 catch (Exception ex)
                 {
@@ -378,7 +381,35 @@ namespace apHashing
         // Listagem de todas as palavras e dicas armazenadas na tabela de hash
         private void btnListar_Click(object sender, EventArgs e)
         {
+            if (tabelaDeHash == null)
+            {
+                MessageBox.Show("Nenhum arquivo foi carregado ainda.");
+                return;
+            }
 
+            try
+            {
+                lsbListagem.Items.Clear();
+
+                // Pega o conteúdo da tabela
+                var conteudo = tabelaDeHash.Conteudo();
+
+                // Ordena pelo valor do hash (antes dos ":")
+                conteudo.Sort((a, b) =>
+                {
+                    var hashA = int.Parse(a.Split(':')[0].Trim());
+                    var hashB = int.Parse(b.Split(':')[0].Trim());
+                    return hashA.CompareTo(hashB);
+                });
+
+                // Exibe os itens no ListBox
+                foreach (var item in conteudo)
+                    lsbListagem.Items.Add(item);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro ao listar: " + ex.Message);
+            }
         }
     }
 }

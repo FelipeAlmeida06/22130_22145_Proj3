@@ -10,31 +10,28 @@ using System.Threading.Tasks;
 public class SondagemLinear<Tipo> : ITabelaHash<Tipo>
     where Tipo : IRegistro<Tipo>, IComparable<Tipo>
 {
-    //private const int tamanhoDaTabela = 131;
-    //Tipo[] dados;
-    //private List<string> chaves;
-
-    private int tamanhoDaTabela;
+    private const int tamanhoPadrao = 131;
+    private int tamanho;
     private Tipo[] dados;
     private List<string> chaves;
-    private int quantidadeDeItens; // Adicione um contador de itens
-
+    
     public List<string> Chaves => chaves;
-    public int Tamanho => tamanhoDaTabela;     // Adicione esta propriedade à interface ITabelaHash
+    public int Tamanho => tamanho;     // Adicione esta propriedade à interface ITabelaHash
 
     public SondagemLinear()
     {
-        dados = new Tipo[tamanhoDaTabela];
+        tamanho = tamanhoPadrao;
+        dados = new Tipo[tamanho];
         chaves = new List<string>();
     }
 
     // Novo construtor para o rehash
-    public SondagemLinear(int tamanho)
+    public SondagemLinear(int tamanhoPersonalizado)   // int tamanho
     {
-        tamanhoDaTabela = tamanho;
-        dados = new Tipo[tamanhoDaTabela];
+        tamanho = tamanhoPersonalizado;
+        dados = new Tipo[tamanho];
         chaves = new List<string>();
-        quantidadeDeItens = 0;
+        //quantidadeDeItens = 0;
     }
 
     public List<string> Conteudo()
@@ -50,7 +47,7 @@ public class SondagemLinear<Tipo> : ITabelaHash<Tipo>
 
     public int Hash(string chave)
     {
-        return Math.Abs(chave.GetHashCode()) % tamanhoDaTabela;
+        return Math.Abs(chave.GetHashCode()) % tamanho;
     }
 
     public bool Existe(Tipo item, out int onde)
@@ -79,7 +76,7 @@ public class SondagemLinear<Tipo> : ITabelaHash<Tipo>
         while (dados[indice] != null)
         {
             indice = (indice + 1);
-            if (indice >= tamanhoDaTabela)
+            if (indice >= tamanho)       // tamanhoDaTabela
                 break;
         }
 
