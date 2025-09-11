@@ -39,6 +39,11 @@ namespace apHashing
 
                 //ITabelaHash<PalavraDica> tabelaDeHash = null;
 
+                // Crie a tabela de hash com um tamanho inicial pequeno, por exemplo, 5.
+                // Isso facilita o teste de redimensionamento.
+                //ITabelaHash<PalavraDica> tabelaDeHash = null;
+                //int tamanhoInicial = 5;
+
                 if (hashEscolhido == 1)
                     tabelaDeHash = new BucketHash<PalavraDica>();
                 if (hashEscolhido == 2)
@@ -76,6 +81,18 @@ namespace apHashing
                             tabelaDeHash.Inserir(registro);
                         }
                     }
+
+                    // Verifica se o rehash é necessário e o executa.
+                    // Aqui, usamos a lógica de rehash baseada no fator de carga (exemplo: se a tabela está 75% cheia).
+                    //double fatorCarga = (double)tabelaDeHash.Chaves.Count / tamanhoInicial;
+                    //if (fatorCarga >= 0.75)
+                    //{
+                        //MessageBox.Show("Tabela de Hash atingiu fator de carga e será redimensionada.");
+
+                        // Chama o método estático Redimensionar da classe ReHash
+                        //tabelaDeHash = ReHash<PalavraDica>.Redimensionar(tabelaDeHash);
+                        //MessageBox.Show("Tabela redimensionada com sucesso!");
+                    //}
 
                     MessageBox.Show("Clique no botão Listar para ver os registros armazenados na tabela de hash.");
 
@@ -161,42 +178,6 @@ namespace apHashing
         // linha selecionada e preencher os campos txtPalavra e txtDica
         private void lsbListagem_SelectedIndexChanged(object sender, EventArgs e)
         {
-
-            /*
-            // Verifica se um item está selecionado
-            if (lsbListagem.SelectedIndex != -1)
-            {
-                // Obtém o texto do item selecionado
-                string selectedItem = lsbListagem.SelectedItem.ToString();
-
-                // Separa o hash da palavra/dica
-                int separatorIndex = selectedItem.IndexOf(':');
-                if (separatorIndex != -1)
-                {
-                    string palavraDica = selectedItem.Substring(separatorIndex + 1).Trim();
-
-                    // Separa a palavra da dica. Usa LastIndexOf para garantir que o hífen da dica não cause erros.
-                    int lastSeparator = palavraDica.LastIndexOf(" - ");
-                    if (lastSeparator != -1)
-                    {
-                        string palavra = palavraDica.Substring(0, lastSeparator).Trim();
-                        string dica = palavraDica.Substring(lastSeparator + 3).Trim();
-
-                        // Para o BucketHash, remova o "|" se existir
-                        if (palavra.StartsWith("|"))
-                        {
-                            palavra = palavra.Replace("|", "").Trim();
-                        }
-
-                        txtPalavra.Text = palavra;
-                        txtDica.Text = dica;
-                    }
-                }
-            }
-            */
-
-
-
             if (lsbListagem.SelectedIndex != -1)
             {
                 string selectedItem = lsbListagem.SelectedItem.ToString();
@@ -410,6 +391,6 @@ namespace apHashing
             {
                 MessageBox.Show("Erro ao listar: " + ex.Message);
             }
-        }
+        } 
     }
 }

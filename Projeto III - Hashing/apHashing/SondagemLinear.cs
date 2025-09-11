@@ -11,10 +11,10 @@ public class SondagemLinear<Tipo> : ITabelaHash<Tipo>
     where Tipo : IRegistro<Tipo>, IComparable<Tipo>
 {
     private const int tamanhoPadrao = 131;
-    private int tamanho;
     private Tipo[] dados;
     private List<string> chaves;
-    
+    private int tamanho;    // variável para armazenar o tamanho da tabela
+
     public List<string> Chaves => chaves;
     public int Tamanho => tamanho;     // Adicione esta propriedade à interface ITabelaHash
 

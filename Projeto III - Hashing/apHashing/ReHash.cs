@@ -4,10 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-//public static class ReHash<Tipo> : ITabelaHash<Tipo>
+//public class ReHash<Tipo> : ITabelaHash<Tipo>
     //where Tipo : IRegistro<Tipo>, IComparable<Tipo>
 
-public static class ReHas<Tipo> where Tipo : IRegistro<Tipo>, IComparable<Tipo>
+public class ReHash<Tipo> where Tipo : IRegistro<Tipo>, IComparable<Tipo>
 {
     private static bool IsPrime(int number)
     {
@@ -33,7 +33,7 @@ public static class ReHas<Tipo> where Tipo : IRegistro<Tipo>, IComparable<Tipo>
         return nextPrime;
     }
 
-    /*
+    
     public static ITabelaHash<Tipo> Redimensionar(ITabelaHash<Tipo> tabelaAntiga)
     {
         int novoTamanho = GetNextPrime(tabelaAntiga.Chaves.Count * 2);
@@ -46,15 +46,15 @@ public static class ReHas<Tipo> where Tipo : IRegistro<Tipo>, IComparable<Tipo>
         }
         else if (tabelaAntiga.GetType() == typeof(SondagemQuadratica<Tipo>))
         {
-            //novaTabela = new SondagemQuadratica<Tipo>(novoTamanho);                 // ajustar
+            novaTabela = new SondagemQuadratica<Tipo>(novoTamanho);                 // ajustar
         }
         else if (tabelaAntiga.GetType() == typeof(DuploHash<Tipo>))
         {
-            //novaTabela = new DuploHash<Tipo>(novoTamanho);                          // ajustar
+            novaTabela = new DuploHash<Tipo>(novoTamanho);                          // ajustar
         }
         else if (tabelaAntiga.GetType() == typeof(BucketHash<Tipo>))
         {
-            //novaTabela = new BucketHash<Tipo>(novoTamanho);                         // ajustar
+            novaTabela = new BucketHash<Tipo>(novoTamanho);                         // ajustar
         }
         else
         {
@@ -67,11 +67,11 @@ public static class ReHas<Tipo> where Tipo : IRegistro<Tipo>, IComparable<Tipo>
             var item = tabelaAntiga.Buscar(chave);
             if (item != null)
             {
-                //novaTabela.Inserir(item);
+                novaTabela.Inserir(item);
             }
         }
 
-        //return novaTabela;
+        return novaTabela;
     }
-    */
+    
 }

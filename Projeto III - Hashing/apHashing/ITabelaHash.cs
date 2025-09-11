@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-interface ITabelaHash<Tipo> where Tipo : IComparable<Tipo>         // IRegistro<Tipo>
+public interface ITabelaHash<Tipo> where Tipo : IComparable<Tipo>         // IRegistro<Tipo>
 {
     int Hash(string chave);
     void Inserir(Tipo item);

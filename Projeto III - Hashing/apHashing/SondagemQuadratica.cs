@@ -13,12 +13,21 @@ public class SondagemQuadratica<Tipo> : ITabelaHash<Tipo>
     private const int tamanhoDaTabela = 131;
     private Tipo[] dados;
     private List<string> chaves;
+    private int tamanho;    // variável para armazenar o tamanho da tabela
 
     public List<string> Chaves => chaves;
 
     public SondagemQuadratica()
     {
         dados = new Tipo[tamanhoDaTabela];
+        chaves = new List<string>();
+    }
+
+    // Novo construtor para o rehash
+    public SondagemQuadratica(int tamanhoPersonalizado)
+    {
+        tamanho = tamanhoPersonalizado;
+        dados = new Tipo[tamanho];
         chaves = new List<string>();
     }
 
