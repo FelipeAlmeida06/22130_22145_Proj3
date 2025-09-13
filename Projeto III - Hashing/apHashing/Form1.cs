@@ -19,7 +19,6 @@ namespace apHashing
     {
 
         private ITabelaHash<PalavraDica> tabelaDeHash = null;
-
         public Form1()
         {
             InitializeComponent();
@@ -37,10 +36,9 @@ namespace apHashing
                 else if (rbSondQuadrat.Checked) hashEscolhido = 3;
                 else if (rbDuploHash.Checked) hashEscolhido = 4;
 
-                //ITabelaHash<PalavraDica> tabelaDeHash = null;
 
-                // Crie a tabela de hash com um tamanho inicial pequeno, por exemplo, 5.
-                // Isso facilita o teste de redimensionamento.
+                // PARA TESTAR A CLASSE REHASH:
+                // Cria a tabela de hash com um tamanho inicial de 5. Isso facilita o teste de redimensionamento da classe ReHash
                 //ITabelaHash<PalavraDica> tabelaDeHash = null;
                 //int tamanhoInicial = 5;
 
@@ -57,20 +55,10 @@ namespace apHashing
                 {
                     using (var sr = new StreamReader(dlgAbrirArquivo.FileName))
                     {
-                        //bool primeiraLinhaArqTexto = true;
-
                         while (!sr.EndOfStream)
                         {
                             string linha = sr.ReadLine();
                             if (string.IsNullOrWhiteSpace(linha)) continue;
-
-                            // Ignorar a primeira linha (cabeçalho)
-                            //if (primeiraLinhaArqTexto)
-                            //{
-                                //primeiraLinhaArqTexto = false;
-                                //continue;
-                            //}
-
                             // Palavra nos 30 primeiros caracteres
                             string palavra = linha.Length >= 30 ? linha.Substring(0, 30).Trim() : linha.Trim();
 
@@ -82,6 +70,8 @@ namespace apHashing
                         }
                     }
 
+
+                    // PARA TESTAR A CLASSE REHASH:
                     // Verifica se o rehash é necessário e o executa.
                     // Aqui, usamos a lógica de rehash baseada no fator de carga (exemplo: se a tabela está 75% cheia).
                     //double fatorCarga = (double)tabelaDeHash.Chaves.Count / tamanhoInicial;
@@ -94,17 +84,12 @@ namespace apHashing
                         //MessageBox.Show("Tabela redimensionada com sucesso!");
                     //}
 
+                    // Mensagem para orientar o usuário
                     MessageBox.Show("Clique no botão Listar para ver os registros armazenados na tabela de hash.");
-
-                    //lsbListagem.Items.Clear();
-                    //foreach (var item in tabelaDeHash.Conteudo())
-                    //{
-                        //lsbListagem.Items.Add(item.ToString());
-                    //}
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("Erro ao processar arquivo: " + ex.Message);
+                    MessageBox.Show("Erro ao processar arquivo: " + ex.Message);    // mensagem de erro
                 }
             }
         }
@@ -122,6 +107,7 @@ namespace apHashing
             string palavra = txtPalavra.Text.Trim();
             string dica = txtDica.Text.Trim();
 
+            // Verifica se os campos de palavra e dica estão vazios/em brancos
             if (string.IsNullOrWhiteSpace(palavra) || string.IsNullOrWhiteSpace(dica))
             {
                 MessageBox.Show("Preencha os campos de Palavra e Dica para incluir o registro.");
@@ -130,21 +116,27 @@ namespace apHashing
 
             try
             {
-                // Insert new item with its hash value
+                // Verifica se a palavra já existe
+                if (tabelaDeHash.Buscar(palavra) != null)
+                {
+                    MessageBox.Show($"A palavra \"{palavra}\" já existe e não pode ser incluída novamente.");
+                    return;
+                }
+
+                // Insira um novo item com seu valor de hash
                 var novo = new PalavraDica(palavra, dica);
                 tabelaDeHash.Inserir(novo);
                 int valorHash = tabelaDeHash.Hash(palavra);
                 string newItem = $"{valorHash,5} : {palavra} - {dica}";
 
-                // Clear and re-populate the ListBox with sorted data
+                // Limpa e preencha novamente o listbox com os dados
                 lsbListagem.Items.Clear();
                 foreach (var item in tabelaDeHash.Conteudo())
                 {
                     lsbListagem.Items.Add(item.ToString());
                 }
 
-                // Sort the displayed list after adding the new item
-                // This is a simple bubble sort for demonstration, a more efficient sort would be better for a large number of items.
+                // Ordena a lista exibida após adicionar o novo item
                 var items = lsbListagem.Items.Cast<string>().ToList();
                 items.Sort((a, b) =>
                 {
@@ -164,13 +156,13 @@ namespace apHashing
                 using (var sw = new StreamWriter(dlgAbrirArquivo.FileName, true))
                     sw.WriteLine(registro);
 
-                // Limpar campos
+                // Limpar campos de palavra e dica
                 txtPalavra.Clear();
                 txtDica.Clear();
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Erro ao incluir: " + ex.Message);
+                MessageBox.Show("Erro ao incluir: " + ex.Message);     // mensagem de erro
             }
         }
 
@@ -178,38 +170,36 @@ namespace apHashing
         // linha selecionada e preencher os campos txtPalavra e txtDica
         private void lsbListagem_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (lsbListagem.SelectedIndex != -1)
+            if (lsbListagem.SelectedIndex != -1)       // Verifica se existe algum item selecionado
             {
-                string selectedItem = lsbListagem.SelectedItem.ToString();
+                string itemSelecionado = lsbListagem.SelectedItem.ToString();    // texto do item selecionado
 
-                int separatorIndex = selectedItem.IndexOf(':');
-                if (separatorIndex != -1)
+                int separador = itemSelecionado.IndexOf(':');
+                if (separador != -1)     // encontrou separador
                 {
-                    string palavraDica = selectedItem.Substring(separatorIndex + 1).Trim();
+                    string palavraDica = itemSelecionado.Substring(separador + 1).Trim();   // remove o índice e usa "palavra - dica"
 
-                    int lastSeparator = palavraDica.LastIndexOf(" - ");
-                    if (lastSeparator != -1)
+                    int ultimoSeparador = palavraDica.LastIndexOf(" - ");     // último separador
+                    if (ultimoSeparador != -1)     // encontrou último separador
                     {
-                        string palavra = palavraDica.Substring(0, lastSeparator).Trim();
-                        string dica = palavraDica.Substring(lastSeparator + 3).Trim();
+                        string palavra = palavraDica.Substring(0, ultimoSeparador).Trim();    // coleta a palavra
+                        string dica = palavraDica.Substring(ultimoSeparador + 3).Trim();      // coleta a dica
 
-                        if (palavra.StartsWith("|"))
+                        if (palavra.StartsWith("|"))      // se a palavra tiver um prefixo "|"
                         {
-                            palavra = palavra.Replace("|", "").Trim();
+                            palavra = palavra.Replace("|", "").Trim();   // remove o caractere "|"
                         }
 
-                        txtPalavra.Text = palavra;
-                        txtDica.Text = dica;
+                        txtPalavra.Text = palavra;     // preenche o campo da palavra
+                        txtDica.Text = dica;           // preenche o campo da dica
 
-                        // Desativa a edição do campo da palavra.
-                        txtPalavra.Enabled = false;
+                        txtPalavra.Enabled = false;    // desativa a edição do campo da palavra
                     }
                 }
             }
             else
             {
-                // Reativa a edição se nada estiver selecionado.
-                txtPalavra.Enabled = true;
+                txtPalavra.Enabled = true;             // reativa a edição se nada estiver selecionado
             }
         }
 
@@ -237,51 +227,45 @@ namespace apHashing
                 // Usa o método Buscar para encontrar o registro completo (Palavra + Dica)
                 var itemParaRemover = tabelaDeHash.Buscar(palavra);
 
-                // Verifica se o registro foi encontrado e tenta removê-lo
+                // Verifica se o registro foi encontrado e tenta remover
                 if (itemParaRemover != null && tabelaDeHash.Remover(itemParaRemover))
                 {
                     MessageBox.Show($"A palavra '{palavra}' foi removida com sucesso.");
 
-                    // Recria o arquivo texto com o conteúdo atualizado
-                    RecriarArquivoTexto();
-
-                    // Atualiza e ordena a ListBox
-                    AtualizarListBox();
+                    RecriarArquivoTexto();      // Recria o arquivo texto com o conteúdo atualizado
+                    AtualizarListBox();         // Atualiza e ordena a ListBox
                 }
                 else
                 {
-                    MessageBox.Show($"Não foi possível encontrar a palavra '{palavra}' para exclusão.");
+                    MessageBox.Show($"Não foi possível encontrar a palavra '{palavra}' para exclusão.");    // mensagem de erro
                 }
 
-                // Limpa os campos após a exclusão bem-sucedida
+                // Limpa os campos após a exclusão do registro
                 txtPalavra.Clear();
                 txtDica.Clear();
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Erro ao excluir: " + ex.Message);
+                MessageBox.Show("Erro ao excluir: " + ex.Message);     // mensagem de erro
             }
         }
 
 
         //============================================================================================================================
-        // FUNÇÕES NECESSÁRIAS PARA EVENTO DO BOTÃO EXCLUIR
+        // FUNÇÕES AUXILIARES PARA EVENTO DO BOTÃO EXCLUIR
         private void RecriarArquivoTexto()
         {
-            // Recria o arquivo texto com o conteúdo atualizado (sem o item removido)
+            // recria o arquivo texto com o conteúdo atualizado (sem o item removido)
             var todosOsItens = tabelaDeHash.Chaves;
             using (var sw = new StreamWriter(dlgAbrirArquivo.FileName))
             {
-                // Escreve o cabeçalho
-                //sw.WriteLine("Palavra                       Dica");
-
-                // Percorre todas as chaves restantes e as escreve no arquivo
+                // percorre todas as chaves restantes e as escreve no arquivo
                 foreach (var chave in todosOsItens)
                 {
                     var item = tabelaDeHash.Buscar(chave);
                     if (item != null)
                     {
-                        // Usa a propriedade Dados do PalavraDica para obter a dica
+                        // usa a propriedade Dados do PalavraDica para obter a dica
                         string registro = item.Chave.PadRight(30).Substring(0, 30) + item.Dados;
                         sw.WriteLine(registro);
                     }
@@ -293,19 +277,20 @@ namespace apHashing
         {
             // Atualiza e ordena a ListBox
             lsbListagem.Items.Clear();
-            var conteudoOrdenado = tabelaDeHash.Conteudo();
+            var conteudoOrdenado = tabelaDeHash.Conteudo();       // coleta o conteúdo da tabela hash (lista no formato "índice: chave - dados")
             conteudoOrdenado.Sort((a, b) => {
-                var hashA = int.Parse(a.Split(':')[0].Trim());
-                var hashB = int.Parse(b.Split(':')[0].Trim());
-                return hashA.CompareTo(hashB);
+                var hashA = int.Parse(a.Split(':')[0].Trim());    // extrai o índice do item A (antes do ":")
+                var hashB = int.Parse(b.Split(':')[0].Trim());    // extrai o índice do item B (antes do ":")
+                return hashA.CompareTo(hashB);                    // compara os índices
             });
 
-            foreach (var item in conteudoOrdenado)
+            foreach (var item in conteudoOrdenado)    // percorre os itens já ordenados
             {
-                lsbListagem.Items.Add(item);
+                lsbListagem.Items.Add(item);          // adiciona cada item na ListBox
             }
         }
         //============================================================================================================================
+
 
         // Alteração de dica de uma dada palavra
         private void btnAlterar_Click(object sender, EventArgs e)
@@ -328,19 +313,14 @@ namespace apHashing
 
             try
             {
-                // Busca o registro completo na tabela hash usando apenas a palavra como chave.
+                // busca o registro completo na tabela hash usando apenas a palavra como chave.
                 var itemParaAlterar = tabelaDeHash.Buscar(palavra);
 
                 if (itemParaAlterar != null)
                 {
-                    // Atualiza a propriedade Dica do objeto encontrado.
-                    itemParaAlterar.Dica = novaDica;
-
-                    // Salva as alterações no arquivo de texto.
-                    RecriarArquivoTexto();
-
-                    // Atualiza a lista exibida na interface para refletir a mudança.
-                    AtualizarListBox();
+                    itemParaAlterar.Dica = novaDica;     // atualiza a propriedade Dica do objeto encontrado
+                    RecriarArquivoTexto();     // salva as alterações no arquivo de texto
+                    AtualizarListBox();        // atualiza a lista exibida na interface para refletir a mudança.
 
                     MessageBox.Show($"A dica da palavra '{palavra}' foi alterada com sucesso.");
 
@@ -350,12 +330,12 @@ namespace apHashing
                 }
                 else
                 {
-                    MessageBox.Show($"Não foi possível encontrar a palavra '{palavra}' para alteração.");
+                    MessageBox.Show($"Não foi possível encontrar a palavra '{palavra}' para alteração.");    // mensagem de erro
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Erro ao alterar: " + ex.Message);
+                MessageBox.Show("Erro ao alterar: " + ex.Message);    // mensagem de erro
             }
         }
 
@@ -370,26 +350,24 @@ namespace apHashing
 
             try
             {
-                lsbListagem.Items.Clear();
+                lsbListagem.Items.Clear();      // limpa o listbox
+                var conteudo = tabelaDeHash.Conteudo();    // coleta o conteúdo da tabela
 
-                // Pega o conteúdo da tabela
-                var conteudo = tabelaDeHash.Conteudo();
-
-                // Ordena pelo valor do hash (antes dos ":")
+                // Ordena pelo valor do hash
                 conteudo.Sort((a, b) =>
                 {
-                    var hashA = int.Parse(a.Split(':')[0].Trim());
-                    var hashB = int.Parse(b.Split(':')[0].Trim());
-                    return hashA.CompareTo(hashB);
+                    var hashA = int.Parse(a.Split(':')[0].Trim());    // extrai o índice do item A (antes do ":")
+                    var hashB = int.Parse(b.Split(':')[0].Trim());    // extrai o índice do item B (antes do ":")
+                    return hashA.CompareTo(hashB);                    // compara os índices
                 });
 
                 // Exibe os itens no ListBox
                 foreach (var item in conteudo)
-                    lsbListagem.Items.Add(item);
+                    lsbListagem.Items.Add(item);          // adiciona cada item na ListBox
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Erro ao listar: " + ex.Message);
+                MessageBox.Show("Erro ao listar: " + ex.Message);    // mensagem de erro
             }
         } 
     }

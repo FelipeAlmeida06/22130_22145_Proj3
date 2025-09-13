@@ -7,6 +7,22 @@
       "RelativeMoniker": "D:0:0:{E0994676-0971-4574-847D-5595CC09A146}|apHashing.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{E0994676-0971-4574-847D-5595CC09A146}|apHashing.csproj|C:\\Users\\Felipe Almeida\\Documents\\GitHub\\22130_22145_Proj3\\Projeto III - Hashing\\apHashing\\sondagemlinear.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E0994676-0971-4574-847D-5595CC09A146}|apHashing.csproj|solutionrelative:sondagemlinear.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E0994676-0971-4574-847D-5595CC09A146}|apHashing.csproj|C:\\Users\\Felipe Almeida\\Documents\\GitHub\\22130_22145_Proj3\\Projeto III - Hashing\\apHashing\\itabelahash.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E0994676-0971-4574-847D-5595CC09A146}|apHashing.csproj|solutionrelative:itabelahash.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E0994676-0971-4574-847D-5595CC09A146}|apHashing.csproj|C:\\Users\\Felipe Almeida\\Documents\\GitHub\\22130_22145_Proj3\\Projeto III - Hashing\\apHashing\\rehash.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E0994676-0971-4574-847D-5595CC09A146}|apHashing.csproj|solutionrelative:rehash.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E0994676-0971-4574-847D-5595CC09A146}|apHashing.csproj|C:\\Users\\Felipe Almeida\\Documents\\GitHub\\22130_22145_Proj3\\Projeto III - Hashing\\apHashing\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{E0994676-0971-4574-847D-5595CC09A146}|apHashing.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{E0994676-0971-4574-847D-5595CC09A146}|apHashing.csproj|C:\\Users\\Felipe Almeida\\Documents\\GitHub\\22130_22145_Proj3\\Projeto III - Hashing\\apHashing\\duplohash.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E0994676-0971-4574-847D-5595CC09A146}|apHashing.csproj|solutionrelative:duplohash.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -31,24 +47,8 @@
       "RelativeMoniker": "D:0:0:{E0994676-0971-4574-847D-5595CC09A146}|apHashing.csproj|solutionrelative:sondagemquadratica.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E0994676-0971-4574-847D-5595CC09A146}|apHashing.csproj|C:\\Users\\Felipe Almeida\\Documents\\GitHub\\22130_22145_Proj3\\Projeto III - Hashing\\apHashing\\sondagemlinear.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E0994676-0971-4574-847D-5595CC09A146}|apHashing.csproj|solutionrelative:sondagemlinear.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{E0994676-0971-4574-847D-5595CC09A146}|apHashing.csproj|C:\\Users\\Felipe Almeida\\Documents\\GitHub\\22130_22145_Proj3\\Projeto III - Hashing\\apHashing\\buckethash.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E0994676-0971-4574-847D-5595CC09A146}|apHashing.csproj|solutionrelative:buckethash.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E0994676-0971-4574-847D-5595CC09A146}|apHashing.csproj|C:\\Users\\Felipe Almeida\\Documents\\GitHub\\22130_22145_Proj3\\Projeto III - Hashing\\apHashing\\rehash.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E0994676-0971-4574-847D-5595CC09A146}|apHashing.csproj|solutionrelative:rehash.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E0994676-0971-4574-847D-5595CC09A146}|apHashing.csproj|C:\\Users\\Felipe Almeida\\Documents\\GitHub\\22130_22145_Proj3\\Projeto III - Hashing\\apHashing\\itabelahash.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E0994676-0971-4574-847D-5595CC09A146}|apHashing.csproj|solutionrelative:itabelahash.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E0994676-0971-4574-847D-5595CC09A146}|apHashing.csproj|C:\\Users\\Felipe Almeida\\Documents\\GitHub\\22130_22145_Proj3\\Projeto III - Hashing\\apHashing\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{E0994676-0971-4574-847D-5595CC09A146}|apHashing.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -138,20 +138,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 2,
               "Title": "ITabelaHash.cs",
               "DocumentMoniker": "C:\\Users\\Felipe Almeida\\Documents\\GitHub\\22130_22145_Proj3\\Projeto III - Hashing\\apHashing\\ITabelaHash.cs",
               "RelativeDocumentMoniker": "ITabelaHash.cs",
               "ToolTip": "C:\\Users\\Felipe Almeida\\Documents\\GitHub\\22130_22145_Proj3\\Projeto III - Hashing\\apHashing\\ITabelaHash.cs",
               "RelativeToolTip": "ITabelaHash.cs",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAAABIAAAABAAAA",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAAA8AAAAcAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-09-06T15:22:31.194Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 5,
               "Title": "DuploHash.cs",
               "DocumentMoniker": "C:\\Users\\Felipe Almeida\\Documents\\GitHub\\22130_22145_Proj3\\Projeto III - Hashing\\apHashing\\DuploHash.cs",
               "RelativeDocumentMoniker": "DuploHash.cs",
@@ -159,25 +159,24 @@
               "RelativeToolTip": "DuploHash.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAC0AAAAkAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-06T15:15:56.709Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-06T15:15:56.709Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 1,
               "Title": "SondagemLinear.cs",
               "DocumentMoniker": "C:\\Users\\Felipe Almeida\\Documents\\GitHub\\22130_22145_Proj3\\Projeto III - Hashing\\apHashing\\SondagemLinear.cs",
               "RelativeDocumentMoniker": "SondagemLinear.cs",
               "ToolTip": "C:\\Users\\Felipe Almeida\\Documents\\GitHub\\22130_22145_Proj3\\Projeto III - Hashing\\apHashing\\SondagemLinear.cs",
               "RelativeToolTip": "SondagemLinear.cs",
-              "ViewState": "AQIAACIAAAAAAAAAAAAkwDMAAAAFAAAA",
+              "ViewState": "AQIAAAsAAAAAAAAAAAAAwBEAAABdAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-09-06T15:14:31.172Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 11,
               "Title": "BucketHash.cs",
               "DocumentMoniker": "C:\\Users\\Felipe Almeida\\Documents\\GitHub\\22130_22145_Proj3\\Projeto III - Hashing\\apHashing\\BucketHash.cs",
               "RelativeDocumentMoniker": "BucketHash.cs",
@@ -185,25 +184,24 @@
               "RelativeToolTip": "BucketHash.cs",
               "ViewState": "AQIAADQAAAAAAAAAAAAkwCkAAAAEAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-06T15:14:02.69Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-06T15:14:02.69Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 3,
               "Title": "ReHash.cs",
               "DocumentMoniker": "C:\\Users\\Felipe Almeida\\Documents\\GitHub\\22130_22145_Proj3\\Projeto III - Hashing\\apHashing\\ReHash.cs",
               "RelativeDocumentMoniker": "ReHash.cs",
               "ToolTip": "C:\\Users\\Felipe Almeida\\Documents\\GitHub\\22130_22145_Proj3\\Projeto III - Hashing\\apHashing\\ReHash.cs",
               "RelativeToolTip": "ReHash.cs",
-              "ViewState": "AQIAAAsAAAAAAAAAAAAAwEAAAABoAAAA",
+              "ViewState": "AQIAADAAAAAAAAAAAAAQwEYAAABQAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-09-08T23:41:22.929Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 10,
               "Title": "SondagemQuadratica.cs",
               "DocumentMoniker": "C:\\Users\\Felipe Almeida\\Documents\\GitHub\\22130_22145_Proj3\\Projeto III - Hashing\\apHashing\\SondagemQuadratica.cs",
               "RelativeDocumentMoniker": "SondagemQuadratica.cs",
@@ -211,12 +209,11 @@
               "RelativeToolTip": "SondagemQuadratica.cs",
               "ViewState": "AQIAABUAAAAAAAAAAAAYwHgAAAAzAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-06T15:14:55.38Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-06T15:14:55.38Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 4,
               "Title": "Form1.cs [Design]",
               "DocumentMoniker": "C:\\Users\\Felipe Almeida\\Documents\\GitHub\\22130_22145_Proj3\\Projeto III - Hashing\\apHashing\\Form1.cs",
               "RelativeDocumentMoniker": "Form1.cs",
@@ -234,14 +231,14 @@
               "RelativeDocumentMoniker": "Form1.cs",
               "ToolTip": "C:\\Users\\Felipe Almeida\\Documents\\GitHub\\22130_22145_Proj3\\Projeto III - Hashing\\apHashing\\Form1.cs",
               "RelativeToolTip": "Form1.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAIEAAAAAAAAA",
+              "ViewState": "AQIAAF8BAAAAAAAAAAAQwBQAAAA9AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-09-06T15:40:18.971Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 9,
               "Title": "PalavraDica.cs",
               "DocumentMoniker": "C:\\Users\\Felipe Almeida\\Documents\\GitHub\\22130_22145_Proj3\\Projeto III - Hashing\\apHashing\\PalavraDica.cs",
               "RelativeDocumentMoniker": "PalavraDica.cs",
@@ -249,12 +246,11 @@
               "RelativeToolTip": "PalavraDica.cs",
               "ViewState": "AQIAAAYAAAAAAAAAAAAAABAAAAARAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-06T15:18:56.525Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-06T15:18:56.525Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 8,
               "Title": "IRegistro.cs",
               "DocumentMoniker": "C:\\Users\\Felipe Almeida\\Documents\\GitHub\\22130_22145_Proj3\\Projeto III - Hashing\\apHashing\\IRegistro.cs",
               "RelativeDocumentMoniker": "IRegistro.cs",
@@ -262,12 +258,11 @@
               "RelativeToolTip": "IRegistro.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-06T15:23:55.344Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-06T15:23:55.344Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 7,
               "Title": "ListaSimples.cs",
               "DocumentMoniker": "C:\\Users\\Felipe Almeida\\Documents\\GitHub\\22130_22145_Proj3\\Projeto III - Hashing\\apHashing\\ListaSimples.cs",
               "RelativeDocumentMoniker": "ListaSimples.cs",
@@ -275,12 +270,11 @@
               "RelativeToolTip": "ListaSimples.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAGcAAAAUAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-08T23:40:17.119Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-08T23:40:17.119Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 6,
               "Title": "NoLista.cs",
               "DocumentMoniker": "C:\\Users\\Felipe Almeida\\Documents\\GitHub\\22130_22145_Proj3\\Projeto III - Hashing\\apHashing\\NoLista.cs",
               "RelativeDocumentMoniker": "NoLista.cs",
@@ -288,8 +282,7 @@
               "RelativeToolTip": "NoLista.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAVAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-08T23:40:21.119Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-08T23:40:21.119Z"
             }
           ]
         }
