@@ -12,27 +12,18 @@ public class BucketHash<Tipo> : ITabelaHash<Tipo>
             where Tipo : IRegistro<Tipo>,
                          IComparable<Tipo>
 {
-    private const int SIZE = 131;  // para gerar mais colisões; o ideal é primo > 100
-    //ArrayList[] dados;             // ALTERAR AQUI: Implementar ListaSimples
-    private ListaSimples<Tipo>[] dados;
-    private List<string> chaves;
-    private int tamanho;    // variável para armazenar o tamanho da tabela
+    private const int SIZE = 131;           // tamanho fixo da tabela de hash
+    private ListaSimples<Tipo>[] dados;     // classe lista ligada simples, cada posição representa uma célula da tabela hash
+    private List<string> chaves;            // lista para armazenar as chaves
+    private int tamanho;                    // variável para armazenar o tamanho da tabela
 
-    public List<string> Chaves => chaves;
+    public List<string> Chaves => chaves;       // propriedade para acessar a lista de chaves
 
     public BucketHash()
     {
-        /*
-        chaves = new List<string>();
-        dados = new ArrayList[SIZE];
-        for (int i = 0; i < SIZE; i++)
-            dados[i] = new ArrayList(1);
-        */
-
-
-        chaves = new List<string>();
-        dados = new ListaSimples<Tipo>[SIZE];
-        for (int i = 0; i < SIZE; i++)
+        chaves = new List<string>();             // inicializa lista de chaves     
+        dados = new ListaSimples<Tipo>[SIZE];    // cria um array
+        for (int i = 0; i < SIZE; i++)           // inicializa cada um como lista vazia
             dados[i] = new ListaSimples<Tipo>();
     }
 
@@ -48,207 +39,87 @@ public class BucketHash<Tipo> : ITabelaHash<Tipo>
         }
     }
 
+    // Hash: Função primária de hash
     public int Hash(string chave)
     {
         long tot = 0;
 
-        for (int i = 0; i < chave.Length; i++)
-            tot += 37 * tot + (char)chave[i];
+        for (int i = 0; i < chave.Length; i++)   // percorre os caracteres da chave
+            tot += 37 * tot + (char)chave[i];    // gera o valor hash
 
-        tot = tot % dados.Length;
+        tot = tot % dados.Length;   // reduz o limite da tabela
         if (tot < 0)
             tot += dados.Length;
 
-        return (int)tot;
+        return (int)tot;    // retorna indice
     }
 
+    // Inserir: Insere um item na tabela de hash
     public void Inserir(Tipo item)
     {
-        /*
-        int valorDeHash = Hash(item.Chave);
-        if (!dados[valorDeHash].Contains(item)) // Contains procura o item e retorna True ou False
-        {
-            dados[valorDeHash].Add(item);
-            chaves.Add(item.Chave);
-        }
-        */
-
-
-        //int valorDeHash = Hash(item.Chave);
-
-        // Aqui não temos Contains pronto em ListaSimples, então precisamos verificar manualmente
-        //if (!Existe(item, out _))
-        //{
-        //dados[valorDeHash].InserirAposFim(item);
-        //chaves.Add(item.Chave);
-        //}
-
-
         int valorDeHash = Hash(item.Chave);
 
-        // Verifica se o item já existe usando o novo método Buscar da ListaSimples
+        // Verifica se o item já existe
         if (dados[valorDeHash].Buscar(item) == null)
         {
-            dados[valorDeHash].InserirAposFim(item);
-            chaves.Add(item.Chave);
+            dados[valorDeHash].InserirAposFim(item);    // insere ao final da lista
+            chaves.Add(item.Chave);                     // adiciona chave
         }
     }
 
+    // Remover: Remove um item da tabela de hash
     public bool Remover(Tipo item)
     {
-        /*
-        int onde = 0;
-        if (!Existe(item, out onde))
-            return false;
-        dados[onde].Remove(item);
-        chaves.Remove(item.Chave);
-        return true;
-        */
-
-
-        //int onde;
-        //if (!Existe(item, out onde))
-        //return false;
-
-        // Para agora, só removemos da lista de chaves.
-        //chaves.Remove(item.Chave);
-        //return true;
-
-
         int onde = Hash(item.Chave);
-        if (dados[onde].Remover(item)) // Usa o novo método Remover
+        if (dados[onde].Remover(item))      // remove da lista ligada
         {
-            chaves.Remove(item.Chave);
-            return true;
+            chaves.Remove(item.Chave);      // remove chave
+            return true;    // encontrou
         }
-        return false;
+        return false;       // não encontrou
     }
 
+    // Existe: Verifica se o item existe
     public bool Existe(Tipo item, out int onde)
     {
-        /*
         onde = Hash(item.Chave);
-        return dados[onde].Contains(item);
-        */
-
-
-        //onde = Hash(item.Chave);
-        // Vamos percorrer a lista ligada manualmente
-        //var atual = dados[onde];
-        //var no = typeof(ListaSimples<Tipo>)
-        //.GetField("primeiro", System.Reflection.BindingFlags.NonPublic | System.Reflection.BindingFlags.Instance)
-        //?.GetValue(atual) as NoLista<Tipo>;
-
-        //while (no != null)
-        //{
-        //if (no.Info.CompareTo(item) == 0)
-        //return true;
-        //no = no.Prox;
-        //}
-
-        //return false;
-
-
-        onde = Hash(item.Chave);
-        return dados[onde].Buscar(item) != null; // Usa o novo método Buscar
+        return dados[onde].Buscar(item) != null;    // encontrou
     }
 
+    // Conteudo: Retorna o conteúdo da tabela de hash
     public List<string> Conteudo()
     {
-        /*
         List<string> saida = new List<string>();
-        for (int i = 0; i < dados.Length; i++)
-            if (dados[i].Count > 0)
-            {
-                string linha = $"{i} : ";                               // string linha = $"{i,5} : ";
-                foreach (Tipo item in dados[i])
-                    //linha += " | " + item.Chave + " - " + item.Dados;
-                    linha += item.Chave + " - " + item.Dados;           // retirei a barra ' I '
-                saida.Add(linha);
-            }
-        return saida;
-        */
-
-        /*
-        List<string> saida = new List<string>();
-        for (int i = 0; i < dados.Length; i++)
-        {
-            // Percorrer cada bucket
-            var no = typeof(ListaSimples<Tipo>)
-                .GetField("primeiro", System.Reflection.BindingFlags.NonPublic | System.Reflection.BindingFlags.Instance)
-                ?.GetValue(dados[i]) as NoLista<Tipo>;
-
-            if (no != null)
+        for (int i = 0; i < dados.Length; i++)      
+            if (!dados[i].EstaVazia)                // se não está vazio
             {
                 string linha = $"{i} : ";
-                while (no != null)
+                NoLista<Tipo> atual = dados[i].Primeiro;    // primeiro nó da lista
+                while (atual != null)               // percorre a lista
                 {
-                    linha += no.Info.Chave + " - " + no.Info.Dados + " ";
-                    no = no.Prox;
+                    linha += atual.Info.Chave + " - " + atual.Info.Dados;    // concatena chave e dados 
+                    atual = atual.Prox;             // próximo nó
                 }
-                saida.Add(linha.Trim());
+                saida.Add(linha);                   // adiciona linha na saída
             }
-        }
-        return saida;
-        */
-
-
-        List<string> saida = new List<string>();
-        for (int i = 0; i < dados.Length; i++)
-            if (!dados[i].EstaVazia)
-            {
-                string linha = $"{i} : ";
-                NoLista<Tipo> atual = dados[i].Primeiro;
-                while (atual != null)
-                {
-                    linha += atual.Info.Chave + " - " + atual.Info.Dados;
-                    atual = atual.Prox;
-                }
-                saida.Add(linha);
-            }
-        return saida;
+        return saida;   // retorna lista com conteúdo
     }
 
+    // Buscar: Busca um item a partir da sua chave
     public Tipo Buscar(string chave)
     {
-        /*
-        int valorDeHash = Hash(chave);
-        foreach (Tipo item in dados[valorDeHash])
-            if (item.Chave == chave)
-                return item;
-        return default(Tipo);
-        */
+        int valorDeHash = Hash(chave);      // calcula o valor de hash
+        NoLista<Tipo> atual = dados[valorDeHash].Primeiro; // obtém o primeiro nó da lista
 
-        /*
-        int valorDeHash = Hash(chave);
-
-        var no = typeof(ListaSimples<Tipo>)
-            .GetField("primeiro", System.Reflection.BindingFlags.NonPublic | System.Reflection.BindingFlags.Instance)
-            ?.GetValue(dados[valorDeHash]) as NoLista<Tipo>;
-
-        while (no != null)
+        while (atual != null)               // percorre lista
         {
-            if (no.Info.Chave == chave)
-                return no.Info;
-            no = no.Prox;
-        }
-
-        return default(Tipo);
-        */
-
-
-        int valorDeHash = Hash(chave);
-        NoLista<Tipo> atual = dados[valorDeHash].Primeiro; // Obtém o primeiro nó da lista
-
-        while (atual != null)
-        {
-            if (atual.Info.Chave == chave)
+            if (atual.Info.Chave == chave)  // se encontrou chave
             {
-                return atual.Info;
+                return atual.Info;          // item
             }
-            atual = atual.Prox;
+            atual = atual.Prox;             // avança na lista
         }
 
-        return default(Tipo);
+        return default(Tipo);               // não encontrou
     }
 }

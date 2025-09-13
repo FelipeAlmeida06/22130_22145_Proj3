@@ -14,8 +14,6 @@ public class PalavraDica : IComparable<PalavraDica>, IRegistro<PalavraDica>
     public string Palavra { get; private set; }   // private set indica que valor Palavra só pode ser definido dentro da classe
     public string Dica { get; set; }  // permite leitura e modificação do valor Dica de fora da classe
 
-    //public PalavraDica() { }
-
     // construtor
     public PalavraDica(string palavra, string dica)
     {
